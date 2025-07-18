@@ -17,7 +17,7 @@ st.write('This model predicts the bean class according to the feature inputs as 
 
 Perimeter = st.slider('Perimeter(Size/edge length): ', 538.0, 1848.0)
 Eccentricity = st.slider('Eccentricity(Round vs long): ', 0.4, 1.0)
-Solidity = st.slider('Regular vs dented: ', 0.9, 1.0)
+Solidity = st.slider('Slider(Regular vs dented): ', 0.9, 1.0)
 roundness = st.slider('Shape type: ', 0.6, 1.0)
 ShapeFactor1 = st.slider('Compact vs elongated: ', 0.00, 0.01)
 ShapeFactor2 = st.slider('Slenderness: ', 0.00, 0.01)
