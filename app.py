@@ -17,14 +17,14 @@ st.write('This model predicts the bean class according to the feature inputs as 
 
 Perimeter = st.slider('Perimeter(Size/edge length): ', 538.0, 1848.0)
 Eccentricity = st.slider('Eccentricity(Round vs long): ', 0.4, 1.0)
-Solidity = st.slider('Slider(Regular vs dented): ', 0.9, 1.0)
-roundness = st.slider('Shape type: ', 0.6, 1.0)
-ShapeFactor1 = st.slider('Compact vs elongated: ', 0.00, 0.01)
-ShapeFactor2 = st.slider('Slenderness: ', 0.00, 0.01)
-ShapeFactor4 = st.slider('Edge complexity: ', 0.98, 1.00)
+Solidity = st.slider('Solidity(Regular vs dented): ', 0.9, 1.0)
+Roundness = st.slider('Roundness(Shape type): ', 0.6, 1.0)
+ShapeFactor1 = st.slider('ShapeFactor1 Compact vs elongated): ', 0.00, 0.01)
+ShapeFactor2 = st.slider('ShapeFactor2 Slenderness): ', 0.00, 0.01)
+ShapeFactor4 = st.slider('ShapeFactor4 Edge complexity): ', 0.98, 1.00)
 
 #Preparing input features for the model
-features = np.array([[Perimeter, Eccentricity, Solidity, roundness, ShapeFactor1, ShapeFactor2,	ShapeFactor4]])
+features = np.array([[Perimeter, Eccentricity, Solidity, Roundness, ShapeFactor1, ShapeFactor2,	ShapeFactor4]])
 scaled_features = scaler.transform(features)
 
 #Prediction
